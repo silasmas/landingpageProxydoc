@@ -55,7 +55,7 @@ Last change:	11/02/2015
 }
 
 .preloader_loader {
-    bottom:20%;	
+    bottom:20%;
 }
 
 .preloader_header .preloader_inner {
@@ -140,50 +140,50 @@ Last change:	11/02/2015
 	animation: animLoadedContent 0.8s cubic-bezier(0.7,0,0.3,1) both;
     -webkit-animation: animLoadedContent 0.8s cubic-bezier(0.7,0,0.3,1) both;
 }
- 
+
 .loaded .top_bar {
     animation-delay: 0.1s;
     -webkit-animation-delay: 0.1s;
-    
+
 }
 
 .loaded .content_container h2,
 .loaded #countdown {
     animation-delay: 0.2s;
     -webkit-animation-delay: 0.2s;
-    
+
 }
 
 .loaded .content_container h6 {
     animation-delay: 0.25s;
     -webkit-animation-delay: 0.25s;
-    
+
 }
 
 .loaded .content_container .newsletter_form {
     animation-delay: 0.3s;
     -webkit-animation-delay: 0.3s;
-    
+
 }
 
 .loaded .social_icons_container {
     animation-delay: 0.35s;
     -webkit-animation-delay: 0.35s;
-    
+
 }
 
 
 @keyframes animLoadedContent {
-    from { 
-        opacity: 0; 
-        transform: translate3d(0,200px,0);  
+    from {
+        opacity: 0;
+        transform: translate3d(0,200px,0);
     }
 }
 
 @-webkit-keyframes animLoadedContent {
-    from { 
-        opacity: 0; 
-        -webkit-transform: translate3d(0,200px,0);  
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,200px,0);
     }
 }
 
@@ -199,25 +199,25 @@ Last change:	11/02/2015
 
 .loaded .mockup-animation2 {
     animation-delay: 1s;
-    -webkit-animation-delay: 1s;   
+    -webkit-animation-delay: 1s;
 }
 
 .loaded .mockup-animation1 {
     animation-delay: 1.35s;
-    -webkit-animation-delay: 1.35s;   
+    -webkit-animation-delay: 1.35s;
 }
- 
+
 @keyframes MockupAnimLoadedContent {
-    from { 
-        opacity: 0; 
-        transform: translate3d(0,50px,0);  
+    from {
+        opacity: 0;
+        transform: translate3d(0,50px,0);
     }
 }
 
 @-webkit-keyframes MockupAnimLoadedContent {
-    from { 
-        opacity: 0; 
-        -webkit-transform: translate3d(0,50px,0);  
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,50px,0);
     }
 }
 
@@ -236,7 +236,7 @@ Last change:	11/02/2015
 
 .icon_big {
 	font-size: 1.72rem;
-	margin:1rem;	
+	margin:1rem;
 }
 
 .icon_normal {
@@ -265,7 +265,7 @@ Last change:	11/02/2015
 .icon_list li div,
 .icon_list li h6 {
 	vertical-align: middle;
-    display: table-cell; 
+    display: table-cell;
 }
 
 
@@ -372,11 +372,11 @@ html {
 	margin-top:-5.285rem;
 }
 
-#main_content h2, 
+#main_content h2,
 #main_content h6 {
 	position:relative;
 	z-index:2
-} 
+}
 
 .content_container {
 	display:table-cell;
@@ -385,7 +385,7 @@ html {
 }
 
 .slogan {
-	display:none;
+	/* display:none; */
 }
 
 /*-- Newsletter Form --*/
@@ -395,7 +395,7 @@ html {
 	width:auto;
 	margin-top: 3.428rem;
 	z-index: 10;
-	display:none;	
+	display:none;
 }
 
 .newsletter_form .input-field {
@@ -404,7 +404,7 @@ html {
 	margin-bottom:1.2rem;
 }
 
-.newsletter_form button {	
+.newsletter_form button {
 	margin-bottom:2.1rem;
 	margin-left:2rem;
 }
@@ -418,7 +418,7 @@ html {
 	opacity:0;
 	display:block;
 	position:absolute;
-	width:100%;	
+	width:100%;
 	-webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -439,7 +439,7 @@ html {
     line-height: 0.8rem;
     margin-top:0;
     padding-top:-10px;
-    color:#F44336;  
+    color:#F44336;
 }
 
 
@@ -471,7 +471,7 @@ html {
 .mockup img {
 	position:relative;
 	display: inline-block;
-    vertical-align: middle; 
+    vertical-align: middle;
     z-index:0;
     width:31rem;
 }
@@ -500,7 +500,7 @@ html {
 }
 
 #maximage_video{
-	background:url('../video/video.jpg') no-repeat 0 0; 
+	background:url('../video/video.jpg') no-repeat 0 0;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -532,7 +532,7 @@ video, object {
 	padding-left:3rem;
 	padding-right:3rem;
 	padding-top:0;
-	padding-bottom:0;	
+	padding-bottom:0;
 	margin-bottom:1.72rem;
 	text-align: center !important;
 }
@@ -578,7 +578,7 @@ video, object {
 	padding-top:5rem;
 	padding-bottom:5rem;
 	position:relative;
-	z-index:1;	
+	z-index:1;
 }
 
 .contact_form .input-field {
@@ -596,7 +596,7 @@ video, object {
     left:50%;
     margin-top:-8.5rem;
     margin-left:-20rem;
-    text-align:center;  
+    text-align:center;
 }
 
 #alert {
@@ -637,7 +637,7 @@ video, object {
 /*--------------------------------------*/
 
 .input-field {
-	position: relative; 
+	position: relative;
 }
 
 .input-field label {
@@ -651,7 +651,7 @@ video, object {
     -moz-transition: 0.2s ease-out;
     -o-transition: 0.2s ease-out;
     -ms-transition: 0.2s ease-out;
-    transition: 0.2s ease-out; 
+    transition: 0.2s ease-out;
 }
 
 .input-field label.active {
@@ -661,7 +661,7 @@ video, object {
     -moz-transform: translateY(-130%);
     -ms-transform: translateY(-130%);
     -o-transform: translateY(-130%);
-    transform: translateY(-130%); 
+    transform: translateY(-130%);
 }
 
 .input-field input[type=text].valid,
@@ -672,7 +672,7 @@ video, object {
     border-bottom: 1px solid #4CAF50;
     -webkit-box-shadow: 0 1px 0 0 #4CAF50;
     -moz-box-shadow: 0 1px 0 0 #4CAF50;
-    box-shadow: 0 1px 0 0 #4CAF50; 
+    box-shadow: 0 1px 0 0 #4CAF50;
 }
 
 .input-field input[type=text].invalid,
@@ -685,7 +685,7 @@ video, object {
     -moz-box-shadow: 0 1px 0 0 #F44336;
     box-shadow: 0 1px 0 0 #F44336;
 }
-       
+
 .input-field .prefix {
     position: absolute;
     width: 2rem;
@@ -695,7 +695,7 @@ video, object {
     -moz-transition: color 0.2s;
     -o-transition: color 0.2s;
     -ms-transition: color 0.2s;
-    transition: color 0.2s; 
+    transition: color 0.2s;
 }
 
 .input-field .prefix ~ input,
@@ -706,13 +706,13 @@ video, object {
 }
 
 .input-field .prefix ~ textarea {
-    padding-top: 0.8rem; 
+    padding-top: 0.8rem;
 }
 
 .input-field .prefix ~ label {
-    margin-left: 3rem; 
+    margin-left: 3rem;
 }
-    
+
 input[type=text],
 input[type=password],
 input[type=email],
@@ -757,11 +757,11 @@ textarea {
 	/* prevents text jump on Enter keypress */
 }
 
- 
+
 /*--------------------------------------*/
 /* 8. Buttons --------------------------*/
-/*--------------------------------------*/ 
- 
+/*--------------------------------------*/
+
 .btn,
 .btn-large,
 .btn-flat {
@@ -789,19 +789,19 @@ textarea {
 .btn-floating:disabled {
 	background-color: #DFDFDF;
 	box-shadow: none;
-	color: #9F9F9F; 
+	color: #9F9F9F;
 }
-  
-.btn.disabled:hover, 
-.disabled.btn-large:hover, 
-.btn-floating.disabled:hover, 
-.btn-large.disabled:hover, 
-.btn:disabled:hover, 
-.btn-large:disabled:hover, 
-.btn-large:disabled:hover, 
+
+.btn.disabled:hover,
+.disabled.btn-large:hover,
+.btn-floating.disabled:hover,
+.btn-large.disabled:hover,
+.btn:disabled:hover,
+.btn-large:disabled:hover,
+.btn-large:disabled:hover,
 .btn-floating:disabled:hover {
 	background-color: #DFDFDF;
-	color: #9F9F9F; 
+	color: #9F9F9F;
 }
 
 .btn i,
@@ -810,7 +810,7 @@ textarea {
 .btn-large i,
 .btn-flat i {
 	font-size: 1rem;
-	line-height: inherit; 
+	line-height: inherit;
 }
 
 .btn,
@@ -833,7 +833,7 @@ textarea {
 	color: white;
 	cursor: pointer;
 }
-  
+
 .btn-flat.disabled {
 	color: white;
 }
@@ -843,7 +843,7 @@ textarea {
 	line-height: 56px;
 }
 .btn-large i {
-	font-size: 1.6rem; 
+	font-size: 1.6rem;
 }
 
 /*--------------------------------------*/
@@ -909,7 +909,7 @@ textarea {
 	-moz-transition: none !important;
 	-o-transition: none !important;
 	-ms-transition: none !important;
-	transition: none !important; 
+	transition: none !important;
 }
 
 .waves-button,
@@ -922,10 +922,10 @@ textarea {
 	-webkit-mask-image: -webkit-radial-gradient(circle, #ffffff 100%, #000000 100%);
 }
 
-.waves-button, 
-.waves-button:hover, 
-.waves-button:visited, 
-.waves-button:link, 
+.waves-button,
+.waves-button:hover,
+.waves-button:visited,
+.waves-button:link,
 .waves-button-input {
 	white-space: nowrap;
 	vertical-align: middle;
@@ -934,7 +934,7 @@ textarea {
 	font-size: 14px;
 	text-align: center;
 	text-decoration: none;
-	z-index: 1; 
+	z-index: 1;
 }
 
 .waves-button-input {
@@ -944,7 +944,7 @@ textarea {
 
 .waves-input-wrapper {
 	border-radius: 2px;
-	vertical-align: bottom; 
+	vertical-align: bottom;
 }
 
 .waves-input-wrapper.waves-button {
@@ -979,7 +979,7 @@ textarea {
 }
 
 .waves-block {
-    display: block; 
+    display: block;
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, ul.side-nav.full, ul.side-nav.fixed {
@@ -991,34 +991,34 @@ textarea {
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover, .modal {
 	-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); 
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .z-depth-2 {
 	-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .z-depth-3 {
 	-webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 	-moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); 
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .z-depth-4 {
 	-webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 	-moz-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); 
+	box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 
 .z-depth-5 {
 	-webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 	-moz-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-	box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22); 
+	box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-	
- 
+
+
  /* Remove Focus Boxes */
 select:focus {
     outline: 1px solid #f8c1c3;
@@ -1031,6 +1031,6 @@ button:focus {
 label {
 	font-size: 0.8rem;
 	color: #9e9e9e;
-} 
-  
+}
+
 
