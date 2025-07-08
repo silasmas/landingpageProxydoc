@@ -47,59 +47,103 @@
             width: 100%;
         }
 
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
+       /* Centrage général */
+.align-center {
+    text-align: center;
+}
 
-        .countdown_part {
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
-            min-width: 80px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+/* Slogan */
+.slogan {
+    color: #ffffff;
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
 
-        .countdown_part .number {
-            display: block;
-            font-size: 36px;
-            font-weight: bold;
-            color: #00BFF3;
-        }
+/* Compteur */
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start; /* aligné à gauche par défaut */
+    margin: 20px auto;
+    max-width: 100%;
+}
 
-        .countdown_part .label {
-            display: block;
-            font-size: 14px;
-            color: #333333;
-        }
+.countdown_part {
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    color: #E60012;
+    flex: 1 1 100px;
+    min-width: 80px;
+    box-sizing: border-box;
+}
 
-        #launch-message {
-            text-align: center;
-            color: #00BFF3;
-            margin-top: 30px;
-            font-size: 24px;
-            font-weight: bold;
-        }
+.countdown_part .number {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-        .countdown {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
+.countdown_part .label {
+    font-size: 14px;
+    text-transform: uppercase;
+}
 
-        .countdown_part {
-            background: #ffffff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-align: center;
-            color: #007BFF;
-        }
+/* Texte sous le timer */
+.slogan-text {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
-        .number {
+/* Bouton Newsletter */
+.newsletter_form {
+    margin-top: 20px;
+}
+
+.newsletter_form a.subscribe-submit {
+    background-color: #E60012;
+    color: #ffffff;
+    /* padding: 12px 25px; */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter_form a.subscribe-submit:hover {
+    background-color: #b3000d;
+}
+
+/* Responsive : sur mobile */
+@media (max-width: 768px) {
+    .countdown {
+        justify-content: center; /* sur mobile, centrer */
+    }
+    .countdown_part {
+        flex: 1 1 45%;
+        min-width: 45%;
+    }
+    .slogan {
+        font-size: 24px;
+    }
+    .countdown_part .number {
+        font-size: 22px;
+    }
+    .countdown_part .label {
+        font-size: 12px;
+    }
+}
+
+
+
+        /* .number {
             display: block;
             font-size: 28px;
             font-weight: bold;
@@ -108,7 +152,7 @@
         .label {
             font-size: 14px;
             text-transform: uppercase;
-        }
+        } */
     </style>
 
 </head>
@@ -188,89 +232,123 @@
 
 
             <!-- Main content -->
-            <div class="container align-left" id="main_content">
-                <div class="content_container row">
+          <div class="container" id="main_content">
+  <div class="content_container row">
+
+    <!-- Slogan -->
+    <div class="col-12 text-center">
+      <h2 class="slogan">
+        L'application ProxyDoc<br>arrive très bientôt !
+      </h2>
+    </div>
+
+    <!-- Timer -->
+    <div class="col-12">
+      <div id="countdown" class="countdown">
+        <div class="countdown_part">
+          <span class="number days">00</span>
+          <span class="label timeRefDays">jours</span>
+        </div>
+        <div class="countdown_part">
+          <span class="number hours">00</span>
+          <span class="label timeRefHours">heures</span>
+        </div>
+        <div class="countdown_part">
+          <span class="number minutes">00</span>
+          <span class="label timeRefMinutes">minutes</span>
+        </div>
+        <div class="countdown_part">
+          <span class="number seconds">00</span>
+          <span class="label timeRefSeconds">secondes</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message affiché à la fin du countdown -->
+    <div class="col-12 text-center">
+      <div id="launch-message" style="display: none;">
+        <h3>L'application ProxyDoc est maintenant disponible !</h3>
+      </div>
+    </div>
+
+    <!-- Texte sous le timer -->
+    <div class="col-12 text-center">
+      <h6 class="slogan-text">
+        Pour être informé de notre lancement et découvrir nos services e-santé innovants,<br class="hidden-xs">
+        inscrivez-vous ci-dessous.
+      </h6>
+    </div>
+
+    <!-- Bouton Newsletter -->
+    <div class="col-12 text-center">
+      <div class="newsletter_form">
+        <a href="#more_info" class="btn waves-effect waves-light subscribe-submit">Inscrivez-vous</a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
-                    <!-- Headline (put class="headline" in Homepage section if you want slogan to be shown)-->
-                    <h2 class="slogan">
-                        L'application ProxyDoc<br>arrive très bientôt !
-                    </h2>
-                    <!-- Timer (put class="timer" in Homepage section if you want timer to be shown)-->
-                    {{-- <div id="countdown" class="countdown">
-                        <div class="countdown_part first">
-                            <h1 class="days">00</h1>
-                            <p class="timeRefDays">days</p>
-                        </div>
-                        <div class="countdown_part">
-                            <h1 class="hours">00</h1>
-                            <p class="timeRefHours">hours</p>
-                        </div>
-                        <div class="countdown_part">
-                            <h1 class="minutes">00</h1>
-                            <p class="timeRefMinutes">minutes</p>
-                        </div>
-                        <div class="countdown_part last">
-                            <h1 class="seconds">00</h1>
-                            <p class="timeRefSeconds">seconds</p>
-                        </div>
-                    </div> --}}
-                    <div id="countdown" class="countdown">
-                        <div class="countdown_part">
-                            <span class="number days">00</span>
-                            <span class="label timeRefDays">jours</span>
-                        </div>
-                        <div class="countdown_part">
-                            <span class="number hours">00</span>
-                            <span class="label timeRefHours">heures</span>
-                        </div>
-                        <div class="countdown_part">
-                            <span class="number minutes">00</span>
-                            <span class="label timeRefMinutes">minutes</span>
-                        </div>
-                        <div class="countdown_part">
-                            <span class="number seconds">00</span>
-                            <span class="label timeRefSeconds">secondes</span>
+            {{-- <div class="container align-center" id="main_content">
+                <div class="content_container row justify-content-center text-center">
+
+                    <!-- Slogan -->
+                    <div class="col-12">
+                        <h2 class="slogan">
+                            L'application ProxyDoc<br>arrive très bientôt !
+                        </h2>
+                    </div>
+
+                    <!-- Timer -->
+                    <div class="col-12">
+                        <div id="countdown" class="countdown">
+                            <div class="countdown_part">
+                                <span class="number days">00</span>
+                                <span class="label timeRefDays">jours</span>
+                            </div>
+                            <div class="countdown_part">
+                                <span class="number hours">00</span>
+                                <span class="label timeRefHours">heures</span>
+                            </div>
+                            <div class="countdown_part">
+                                <span class="number minutes">00</span>
+                                <span class="label timeRefMinutes">minutes</span>
+                            </div>
+                            <div class="countdown_part">
+                                <span class="number seconds">00</span>
+                                <span class="label timeRefSeconds">secondes</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Message affiché à la fin du countdown -->
-                    <div id="launch-message" style="display: none;">
-                        <h3>L'application ProxyDoc est maintenant disponible !</h3>
+                    <div class="col-12">
+                        <div id="launch-message" style="display: none;">
+                            <h3>L'application ProxyDoc est maintenant disponible !</h3>
+                        </div>
                     </div>
 
-                    <!-- //Timer -->
-
-
-                    <h6>
-                        Pour être informé de notre lancement et découvrir nos services e-santé innovants,<br
-                            class="hidden-xs">
-                        inscrivez-vous ci-dessous.
-                    </h6>
-
-                    <!-- Newsletter Form (put class="newsletter" in Homepage section if you want newsletter form to be shown)-->
-                    <div class="newsletter_form">
-                        <a href="#more_info" class="btn waves-effect waves-light subscribe-submit">Inscrivez-vous</a>
-                        {{-- <form method="POST" action="{{ route('newsletter.subscribe') }}" id="subscribe-form">
-                            @csrf
-                            <div class="input-field">
-                                <div data-icon="&#xe563;" class="prefix"></div>
-                                <input id="email" type="email" name="email" class="validate" required>
-                                <label for="email">Adresse e-mail</label>
-                            </div>
-                            <button class="btn waves-effect waves-light subscribe-submit" type="submit" name="action"
-                                id="subscribe-form-submit">
-                                S'inscrire
-                            </button>
-                        </form> --}}
-                        <div id="preview"></div>
+                    <!-- Texte sous le timer -->
+                    <div class="col-12">
+                        <h6 class="slogan-text">
+                            Pour être informé de notre lancement et découvrir nos services e-santé innovants,<br
+                                class="hidden-xs">
+                            inscrivez-vous ci-dessous.
+                        </h6>
                     </div>
 
-                    <!-- //Newsletter form -->
-
+                    <!-- Bouton Newsletter -->
+                    <div class="col-12">
+                        <div class="newsletter_form">
+                            <a href="#more_info"
+                                class="btn waves-effect waves-light subscribe-submit">Inscrivez-vous</a>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
+            </div> --}}
+
             <!-- //Main content -->
 
 
@@ -385,7 +463,7 @@
                                 </div>
                                 <div class="input-field">
                                     <input id="sexe" type="text" name="sexe" required>
-                                    <label for="phone">Sexe</label>
+                                    <label for="phone">Sexe (Homme,Femme ou Autre)</label>
                                 </div>
 
 
