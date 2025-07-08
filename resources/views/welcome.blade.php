@@ -84,6 +84,31 @@
             font-size: 24px;
             font-weight: bold;
         }
+
+        .countdown {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .countdown_part {
+            background: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .number {
+            display: block;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
     </style>
 
 </head>
@@ -422,12 +447,16 @@
         $('document').ready(function() {
 
             $("#countdown").countdown({
-                date: "10/30/2025 23:59:59", // change la date ici si besoin
+                date: "10/30/2025 23:59:59",
                 format: "on"
             }, function() {
                 $("#countdown").hide();
                 $("#launch-message").fadeIn();
             });
+
+
+
+
         });
         $('document').ready(function() {
             // 1.1 Configuration de Toastr
@@ -440,15 +469,16 @@
                 $("#loader-overlay").fadeOut(100);
                 $("#loader").fadeOut(100);
             }
-             function validateEmail(email) {
-        let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
 
-    function validatePhone(phone) {
-        let regex = /^\+?[0-9]{9,15}$/;
-        return regex.test(phone);
-    }
+            function validateEmail(email) {
+                let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            function validatePhone(phone) {
+                let regex = /^\+?[0-9]{9,15}$/;
+                return regex.test(phone);
+            }
             $("#contacte-form").on("submit", function(e) {
                 e.preventDefault();
                 let $submitBtn = $(this).find("button[type='submit']");
