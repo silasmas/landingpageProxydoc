@@ -24,7 +24,7 @@
     <!-- MaxImage background image slideshow -->
     <link href="{{ asset('css/responsivity.css') }}" rel="stylesheet" media="screen"> <!-- Responsive Fixes -->
     <link rel="stylesheet" type="text/css" href="{{ asset('js/sweetalert/sweetalert.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Modernizer and IE specyfic files -->
     <script src="{{ asset('js/modernizr.custom.js') }}"></script>
@@ -557,7 +557,8 @@
 
         });
         $('document').ready(function() {
-            // 1.1 Configuration de Toastr
+
+            // loader
             function showLoader() {
                 $("#loader-overlay").fadeIn(100);
                 $("#loader").fadeIn(100);
@@ -577,8 +578,10 @@
                 let regex = /^\+?[0-9]{9,15}$/;
                 return regex.test(phone);
             }
+
             $("#contacte-form").on("submit", function(e) {
-                e.preventDefault();
+                e.preventDefault(); // ➡️ bloque le rechargement
+
                 let $submitBtn = $(this).find("button[type='submit']");
                 $submitBtn.prop("disabled", true);
                 showLoader();
@@ -589,8 +592,7 @@
                 let sexe = $("select[name='sexe']").val();
                 let age = $("input[name='age']").val().trim();
 
-                // Vérification front
-                // Validation JS → même logique que Laravel
+                // validations JS
                 if (name === "" || name.length > 255) {
                     swal({
                         title: "Erreur",
@@ -598,6 +600,8 @@
                         icon: "error",
                         button: "OK",
                     });
+                    hideLoader();
+                    $submitBtn.prop("disabled", false);
                     return;
                 }
 
@@ -628,7 +632,7 @@
                 if (sexe === "" && !["Homme", "Femme", "Autre"].includes(sexe)) {
                     swal({
                         title: "Erreur",
-                        text: "Sexe invalide.(Homme, Femme, Autre)",
+                        text: "Sexe invalide. (Homme, Femme, Autre)",
                         icon: "error",
                         button: "OK",
                     });
@@ -641,7 +645,7 @@
                     if (isNaN(age) || age < 17 || age > 120) {
                         swal({
                             title: "Erreur",
-                            text: "Äge invalide (18-120).",
+                            text: "Âge invalide (17-120).",
                             icon: "error",
                             button: "OK",
                         });
@@ -663,39 +667,24 @@
                         age: age
                     }
                 }).done(function(response) {
-                    console.log(response)
                     swal({
                         title: response.message,
                         icon: 'success'
                     });
                     $("#contacte-form")[0].reset();
                 }).fail(function(xhr) {
+                    console.error(xhr);
+
+                    let errorMsg = xhr.responseJSON?.message || "Erreur lors de l'envoi.";
                     swal({
                         title: "Erreur",
-                        text: xhr.responseJSON?.message || "Erreur lors de l'envoi.",
+                        text: errorMsg,
                         icon: "error",
                         button: "OK",
                     });
 
-
-                    console.error(xhr);
-                    // Vérifier si c’est une erreur validation Laravel
-                    // Gestion erreurs 422
                     if (xhr.status === 422) {
                         let json = xhr.responseJSON;
-
-                        // Afficher d'abord le message général s'il existe
-                        if (json.message) {
-                            swal({
-                                title: "Erreur",
-                                text: json.message,
-                                icon: "error",
-                                button: "OK",
-                            });
-
-                        }
-
-                        // Puis détailler chaque champ si présent
                         if (json.errors) {
                             $.each(json.errors, function(field, messages) {
                                 $.each(messages, function(i, msg) {
@@ -705,33 +694,16 @@
                                         icon: "error",
                                         button: "OK",
                                     });
-
                                 });
                             });
                         }
-
-                    } else {
-                        let errorMsg = xhr.responseJSON?.message || "Erreur lors de l'envoi.";
-
-                        swal({
-                            title: "Erreur",
-                            text: errorMsg,
-                            icon: "error",
-                            button: "OK",
-                        });
                     }
+
                 }).always(function() {
-                    // ➡️ Cache le loader
                     hideLoader();
                     $submitBtn.prop("disabled", false);
                 });
             });
-
-            function validateEmail(email) {
-                let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
-
         });
     </script>
 
