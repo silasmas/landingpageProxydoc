@@ -117,25 +117,21 @@
     <div id="preloader_container">
         <!-- Overlay -->
         <div id="loader-overlay"
-            style="
-    display: none;
+            style="display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0, 191, 243, 0.3);
-    z-index: 9998;
-">
+    z-index: 9998;">
         </div>
 
         <!-- Spinner -->
         <div id="loader"
-            style="
-    display: none;
+            style="display: none;
     position: fixed;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
-">
+    z-index: 9999;">
             <div class="preloader-wrapper big active">
                 <div class="spinner-layer spinner-blue-only">
                     <div class="circle-clipper left">
@@ -447,7 +443,7 @@
         $('document').ready(function() {
 
             $("#countdown").countdown({
-                date: "10/30/2025 23:59:59",
+                date: "09/30/2025 23:59:59",
                 format: "on"
             }, function() {
                 $("#countdown").hide();
