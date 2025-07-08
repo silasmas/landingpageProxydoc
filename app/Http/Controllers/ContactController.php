@@ -17,12 +17,14 @@ class ContactController extends Controller
                 'required',
                 'regex:/^\+?[0-9]{9,15}$/',
                 'max:20',
+                'unique:contacts,phone',
             ],
             'sexe'  => 'nullable|in:Homme,Femme,Autre',
             'age'   => 'nullable|integer|min:0|max:120',
 
         ], [
             'email.unique'  => 'Cet e-mail est déjà enregistré. Veuillez en utiliser un autre.',
+               'phone.unique'  => 'Ce numéro de téléphone est déjà enregistré. Veuillez en utiliser un autre.',
             'phone.regex'   => 'Le numéro de téléphone doit contenir uniquement des chiffres (9 à 15) et peut commencer par +.',
             'sexe.required' => 'Le champ sexe est obligatoire.',
         ]);
