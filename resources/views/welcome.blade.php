@@ -337,7 +337,7 @@
                             Restez informé du lancement de l’application ProxyDoc et découvrez nos services innovants en
                             e-santé.
                             Laissez-nous vos coordonnées via ce formulaire ou écrivez-nous à l’adresse :
-                            <a href="mailto:contact@proxydoc.cd">contact@proxydoc.cd</a>.
+                            <a href="mailto:contact@proxydoc.cd">contact@proxydoc.org</a>.
                         </p>
 
 
