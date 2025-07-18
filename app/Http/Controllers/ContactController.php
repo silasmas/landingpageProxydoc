@@ -19,7 +19,7 @@ class ContactController extends Controller
                 'max:20',
                 'unique:contacts,phone',
             ],
-            'sexe'  => 'nullable|in:Homme,Femme,Autre',
+            'sexe'  => 'nullable|in:Homme,Femme,homme,femme,Autre',
             'age'   => 'nullable|integer|min:0|max:120',
 
         ], [
