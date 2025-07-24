@@ -546,7 +546,7 @@
         $('document').ready(function() {
 
             $("#countdown").countdown({
-                date: "09/30/2025 23:59:59",
+                date: "09/02/2025 23:59:59",
                 format: "on"
             }, function() {
                 $("#countdown").hide();
