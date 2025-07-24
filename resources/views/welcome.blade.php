@@ -4,7 +4,11 @@
 <head>
     <title>PROXYDOC</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="ProxyDoc - L'application e-santé qui révolutionne l'accès aux soins en République Démocratique du Congo.">
+
 
     <!-- Included Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
@@ -184,20 +188,20 @@
         <!-- Overlay -->
         <div id="loader-overlay"
             style="display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 191, 243, 0.3);
-    z-index: 9998;">
+                position: fixed;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                background: rgba(0, 191, 243, 0.3);
+                z-index: 9998;">
         </div>
 
         <!-- Spinner -->
         <div id="loader"
             style="display: none;
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;">
+                position: fixed;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 9999;">
             <div class="preloader-wrapper big active">
                 <div class="spinner-layer spinner-blue-only">
                     <div class="circle-clipper left">
@@ -559,246 +563,244 @@
         });
 
 
-            // loader
-            function showLoader() {
-                $("#loader-overlay").fadeIn(100);
-                $("#loader").fadeIn(100);
-            }
+        // loader
+        function showLoader() {
+            $("#loader-overlay").fadeIn(100);
+            $("#loader").fadeIn(100);
+        }
 
-            function hideLoader() {
-                $("#loader-overlay").fadeOut(100);
-                $("#loader").fadeOut(100);
-            }
+        function hideLoader() {
+            $("#loader-overlay").fadeOut(100);
+            $("#loader").fadeOut(100);
+        }
 
-            function validateEmail(email) {
-                let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
+        function validateEmail(email) {
+            let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
 
-            function validatePhone(phone) {
-                let regex = /^\+?[0-9]{9,15}$/;
-                return regex.test(phone);
-            }
+        function validatePhone(phone) {
+            let regex = /^\+?[0-9]{9,15}$/;
+            return regex.test(phone);
+        }
 
-            // $("#contacte-form").on("submit", function(e) {
-            //     e.preventDefault(); // ➡️ bloque le rechargement
+        // $("#contacte-form").on("submit", function(e) {
+        //     e.preventDefault(); // ➡️ bloque le rechargement
 
-            //     let $submitBtn = $(this).find("button[type='submit']");
-            //     $submitBtn.prop("disabled", true);
-            //     showLoader();
+        //     let $submitBtn = $(this).find("button[type='submit']");
+        //     $submitBtn.prop("disabled", true);
+        //     showLoader();
 
-            //     let name = $("input[name='name']").val().trim();
-            //     let email = $("input[name='email']").val().trim();
-            //     let phone = $("input[name='phone']").val().trim();
-            //     let sexe = $("select[name='sexe']").val();
-            //     let age = $("input[name='age']").val().trim();
+        //     let name = $("input[name='name']").val().trim();
+        //     let email = $("input[name='email']").val().trim();
+        //     let phone = $("input[name='phone']").val().trim();
+        //     let sexe = $("select[name='sexe']").val();
+        //     let age = $("input[name='age']").val().trim();
 
-            //     // validations JS
-            //     if (name === "" || name.length > 255) {
-            //         swal({
-            //             title: "Erreur",
-            //             text: "Veuillez saisir un nom (max 255 caractères).",
-            //             icon: "error",
-            //             button: "OK",
-            //         });
-            //         hideLoader();
-            //         $submitBtn.prop("disabled", false);
-            //         return;
-            //     }
+        //     // validations JS
+        //     if (name === "" || name.length > 255) {
+        //         swal({
+        //             title: "Erreur",
+        //             text: "Veuillez saisir un nom (max 255 caractères).",
+        //             icon: "error",
+        //             button: "OK",
+        //         });
+        //         hideLoader();
+        //         $submitBtn.prop("disabled", false);
+        //         return;
+        //     }
 
-            //     if (email === "" || !validateEmail(email) || email.length > 255) {
-            //         swal({
-            //             title: "Erreur",
-            //             text: "Adresse e-mail invalide ou trop longue.",
-            //             icon: "error",
-            //             button: "OK",
-            //         });
-            //         hideLoader();
-            //         $submitBtn.prop("disabled", false);
-            //         return;
-            //     }
+        //     if (email === "" || !validateEmail(email) || email.length > 255) {
+        //         swal({
+        //             title: "Erreur",
+        //             text: "Adresse e-mail invalide ou trop longue.",
+        //             icon: "error",
+        //             button: "OK",
+        //         });
+        //         hideLoader();
+        //         $submitBtn.prop("disabled", false);
+        //         return;
+        //     }
 
-            //     if (phone === "" || !validatePhone(phone) || phone.length > 20) {
-            //         swal({
-            //             title: "Erreur",
-            //             text: "Le numéro de téléphone est obligatoire et doit être au format valide (9 à 15 chiffres, éventuellement précédé de +).",
-            //             icon: "error",
-            //             button: "OK",
-            //         });
-            //         hideLoader();
-            //         $submitBtn.prop("disabled", false);
-            //         return;
-            //     }
+        //     if (phone === "" || !validatePhone(phone) || phone.length > 20) {
+        //         swal({
+        //             title: "Erreur",
+        //             text: "Le numéro de téléphone est obligatoire et doit être au format valide (9 à 15 chiffres, éventuellement précédé de +).",
+        //             icon: "error",
+        //             button: "OK",
+        //         });
+        //         hideLoader();
+        //         $submitBtn.prop("disabled", false);
+        //         return;
+        //     }
 
-            //     if (sexe === "" && !["Homme", "Femme", "Autre"].includes(sexe)) {
-            //         swal({
-            //             title: "Erreur",
-            //             text: "Sexe invalide. (Homme, Femme, Autre)",
-            //             icon: "error",
-            //             button: "OK",
-            //         });
-            //         hideLoader();
-            //         $submitBtn.prop("disabled", false);
-            //         return;
-            //     }
+        //     if (sexe === "" && !["Homme", "Femme", "Autre"].includes(sexe)) {
+        //         swal({
+        //             title: "Erreur",
+        //             text: "Sexe invalide. (Homme, Femme, Autre)",
+        //             icon: "error",
+        //             button: "OK",
+        //         });
+        //         hideLoader();
+        //         $submitBtn.prop("disabled", false);
+        //         return;
+        //     }
 
-            //     if (age !== "") {
-            //         if (isNaN(age) || age < 17 || age > 120) {
-            //             swal({
-            //                 title: "Erreur",
-            //                 text: "Âge invalide (17-120).",
-            //                 icon: "error",
-            //                 button: "OK",
-            //             });
-            //             hideLoader();
-            //             $submitBtn.prop("disabled", false);
-            //             return;
-            //         }
-            //     }
+        //     if (age !== "") {
+        //         if (isNaN(age) || age < 17 || age > 120) {
+        //             swal({
+        //                 title: "Erreur",
+        //                 text: "Âge invalide (17-120).",
+        //                 icon: "error",
+        //                 button: "OK",
+        //             });
+        //             hideLoader();
+        //             $submitBtn.prop("disabled", false);
+        //             return;
+        //         }
+        //     }
 
-            //     $.ajax({
-            //         url: "{{ route('contact.send') }}",
-            //         type: "POST",
-            //         data: {
-            //             _token: "{{ csrf_token() }}",
-            //             name: name,
-            //             email: email,
-            //             phone: phone,
-            //             sexe: sexe,
-            //             age: age
-            //         }
-            //     }).done(function(response) {
-            //         swal({
-            //             title: response.message,
-            //             icon: 'success'
-            //         });
-            //         $("#contacte-form")[0].reset();
-            //     }).fail(function(xhr) {
-            //         console.error(xhr);
+        //     $.ajax({
+        //         url: "{{ route('contact.send') }}",
+        //         type: "POST",
+        //         data: {
+        //             _token: "{{ csrf_token() }}",
+        //             name: name,
+        //             email: email,
+        //             phone: phone,
+        //             sexe: sexe,
+        //             age: age
+        //         }
+        //     }).done(function(response) {
+        //         swal({
+        //             title: response.message,
+        //             icon: 'success'
+        //         });
+        //         $("#contacte-form")[0].reset();
+        //     }).fail(function(xhr) {
+        //         console.error(xhr);
 
-            //         let errorMsg = xhr.responseJSON?.message || "Erreur lors de l'envoi.";
-            //         swal({
-            //             title: "Erreur",
-            //             text: errorMsg,
-            //             icon: "error",
-            //             button: "OK",
-            //         });
+        //         let errorMsg = xhr.responseJSON?.message || "Erreur lors de l'envoi.";
+        //         swal({
+        //             title: "Erreur",
+        //             text: errorMsg,
+        //             icon: "error",
+        //             button: "OK",
+        //         });
 
-            //         if (xhr.status === 422) {
-            //             let json = xhr.responseJSON;
-            //             if (json.errors) {
-            //                 $.each(json.errors, function(field, messages) {
-            //                     $.each(messages, function(i, msg) {
-            //                         swal({
-            //                             title: "Erreur",
-            //                             text: msg,
-            //                             icon: "error",
-            //                             button: "OK",
-            //                         });
-            //                     });
-            //                 });
-            //             }
-            //         }
+        //         if (xhr.status === 422) {
+        //             let json = xhr.responseJSON;
+        //             if (json.errors) {
+        //                 $.each(json.errors, function(field, messages) {
+        //                     $.each(messages, function(i, msg) {
+        //                         swal({
+        //                             title: "Erreur",
+        //                             text: msg,
+        //                             icon: "error",
+        //                             button: "OK",
+        //                         });
+        //                     });
+        //                 });
+        //             }
+        //         }
 
-            //     }).always(function() {
-            //         hideLoader();
-            //         $submitBtn.prop("disabled", false);
-            //     });
-            // });
+        //     }).always(function() {
+        //         hideLoader();
+        //         $submitBtn.prop("disabled", false);
+        //     });
+        // });
 
 
 
-            function envoyerFormulaire(e) {
-                e.preventDefault();
+        function envoyerFormulaire(e) {
+            e.preventDefault();
 
-                let $form = $("#contacte-form");
-                let $submitBtn = $form.find("button[type='submit']");
-                $submitBtn.prop("disabled", true);
-                showLoader();
+            let $form = $("#contacte-form");
+            let $submitBtn = $form.find("button[type='submit']");
+            $submitBtn.prop("disabled", true);
+            showLoader();
 
-                let name = $("input[name='name']").val().trim();
-                let email = $("input[name='email']").val().trim();
-                let phone = $("input[name='phone']").val().trim();
-                let sexe = $("input[name='sexe']").val();
-                let age = $("input[name='age']").val().trim();
+            let name = $("input[name='name']").val().trim();
+            let email = $("input[name='email']").val().trim();
+            let phone = $("input[name='phone']").val().trim();
+            let sexe = $("input[name='sexe']").val();
+            let age = $("input[name='age']").val().trim();
 
-                // Validations JS
-                if (name === "" || name.length > 255) {
-                    showError("Veuillez saisir un nom (max 255 caractères).");
-                    return false;
-                }
-
-                if (email === "" || !validateEmail(email) || email.length > 255) {
-                    showError("Adresse e-mail invalide ou trop longue.");
-                    return false;
-                }
-
-                if (phone === "" || !validatePhone(phone) || phone.length > 20) {
-                    showError(
-                        "Le numéro de téléphone est obligatoire et doit être au format valide (9 à 15 chiffres, éventuellement précédé de +)."
-                        );
-                    return false;
-                }
-
-                if (sexe === "" || !["Homme", "Femme","homme", "femme", "Autre"].includes(sexe)) {
-
-                    showError("Sexe invalide. (Homme, Femme, Autre)");
-                    return false;
-                }
-
-                if (age !== "") {
-                    if (isNaN(age) || age < 17 || age > 120) {
-                        showError("Âge invalide (17-120).");
-                        return false;
-                    }
-                }
-
-                $.ajax({
-                    url: "{{ route('contact.send') }}",
-                    type: "POST",
-                    data: {
-                        _token: "{{ csrf_token() }}",
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        sexe: sexe,
-                        age: age
-                    }
-                }).done(function(response) {
-                    swal({
-                        title: response.message,
-                        icon: 'success'
-                    });
-                    $form[0].reset();
-                }).fail(function(xhr) {
-                    let errorMsg = xhr.responseJSON?.message || "Erreur lors de l'envoi.";
-                    showError(errorMsg);
-
-                    if (xhr.status === 422 && xhr.responseJSON.errors) {
-                        $.each(xhr.responseJSON.errors, function(field, messages) {
-                            messages.forEach(msg => showError(msg));
-                        });
-                    }
-                }).always(function() {
-                    hideLoader();
-                    $submitBtn.prop("disabled", false);
-                });
-
+            // Validations JS
+            if (name === "" || name.length > 255) {
+                showError("Veuillez saisir un nom (max 255 caractères).");
                 return false;
             }
 
-            function showError(message) {
-                swal({
-                    title: "Erreur",
-                    text: message,
-                    icon: "error",
-                    button: "OK"
-                });
-                hideLoader();
-                $("#contacte-form").find("button[type='submit']").prop("disabled", false);
+            if (email === "" || !validateEmail(email) || email.length > 255) {
+                showError("Adresse e-mail invalide ou trop longue.");
+                return false;
             }
 
+            if (phone === "" || !validatePhone(phone) || phone.length > 20) {
+                showError(
+                    "Le numéro de téléphone est obligatoire et doit être au format valide (9 à 15 chiffres, éventuellement précédé de +)."
+                );
+                return false;
+            }
 
+            if (sexe === "" || !["Homme", "Femme", "homme", "femme", "Autre"].includes(sexe)) {
+
+                showError("Sexe invalide. (Homme, Femme, Autre)");
+                return false;
+            }
+
+            if (age !== "") {
+                if (isNaN(age) || age < 17 || age > 120) {
+                    showError("Âge invalide (17-120).");
+                    return false;
+                }
+            }
+
+            $.ajax({
+                url: "{{ route('contact.send') }}",
+                type: "POST",
+                data: {
+                    _token: "{{ csrf_token() }}",
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    sexe: sexe,
+                    age: age
+                }
+            }).done(function(response) {
+                swal({
+                    title: response.message,
+                    icon: 'success'
+                });
+                $form[0].reset();
+            }).fail(function(xhr) {
+                let errorMsg = xhr.responseJSON?.message || "Erreur lors de l'envoi.";
+                showError(errorMsg);
+
+                if (xhr.status === 422 && xhr.responseJSON.errors) {
+                    $.each(xhr.responseJSON.errors, function(field, messages) {
+                        messages.forEach(msg => showError(msg));
+                    });
+                }
+            }).always(function() {
+                hideLoader();
+                $submitBtn.prop("disabled", false);
+            });
+
+            return false;
+        }
+
+        function showError(message) {
+            swal({
+                title: "Erreur",
+                text: message,
+                icon: "error",
+                button: "OK"
+            });
+            hideLoader();
+            $("#contacte-form").find("button[type='submit']").prop("disabled", false);
+        }
     </script>
 
 
