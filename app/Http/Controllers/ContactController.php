@@ -19,14 +19,14 @@ class ContactController extends Controller
                 'max:20',
                 'unique:contacts,phone',
             ],
-            'sexe'  => 'nullable|in:Homme,Femme,homme,femme,Autre',
+            // 'sexe'  => 'nullable|in:Homme,Femme,homme,femme,Autre',
             'age'   => 'nullable|integer|min:0|max:120',
 
         ], [
             'email.unique'  => 'Cet e-mail est déjà enregistré. Veuillez en utiliser un autre.',
                'phone.unique'  => 'Ce numéro de téléphone est déjà enregistré. Veuillez en utiliser un autre.',
             'phone.regex'   => 'Le numéro de téléphone doit contenir uniquement des chiffres (9 à 15) et peut commencer par +.',
-            'sexe.required' => 'Le champ sexe est obligatoire.',
+            // 'sexe.required' => 'Le champ sexe est obligatoire.',
         ]);
 
         // 2️⃣ Enregistrement des informations en base de données

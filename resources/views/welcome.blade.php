@@ -492,7 +492,7 @@
                                 </div>
                                 <div class="input-field">
                                     <input id="sexe" type="text" name="sexe" required>
-                                    <label for="phone">Sexe (Homme,Femme ou Autre)</label>
+                                    <label for="phone">Sexe (Homme,Femme)</label>
                                 </div>
 
 
@@ -744,11 +744,7 @@
                 return false;
             }
 
-            if (sexe === "" || !["Homme", "Femme", "homme", "femme", "Autre"].includes(sexe)) {
 
-                showError("Sexe invalide. (Homme, Femme, Autre)");
-                return false;
-            }
 
             if (age !== "") {
                 if (isNaN(age) || age < 17 || age > 120) {
