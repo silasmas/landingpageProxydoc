@@ -64,7 +64,7 @@
   <section id="qui">
     <h2>1. Responsable du traitement</h2>
     <p><strong>ProxyDoc</strong> – <strong>TODO : PROXYDOC SARL</strong>, <strong>TODO RC/NIF</strong> – siège : <strong>TODO adresse, Kinshasa (RDC)</strong>.</p>
-    <p>E-mail : <a href="mailto:support@proxydoc.cd">support@proxydoc.cd</a> — Délégué à la protection des données : <a href="mailto:dpo@proxydoc.cd">dpo@proxydoc.cd</a></p>
+    <p>E-mail : <a href="mailto:support@proxydoc.org">support@proxydoc.org</a> — Délégué à la protection des données : <a href="mailto:dpo@proxydoc.org">dpo@proxydoc.org</a></p>
   </section>
 
   <section id="donnees">

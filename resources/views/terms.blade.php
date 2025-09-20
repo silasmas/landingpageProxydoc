@@ -145,7 +145,7 @@
 
   <section id="contact">
     <h2>11. Contact</h2>
-    <p>Support : <a href="mailto:support@proxydoc.cd">support@proxydoc.cd</a> — <a href="/politique-confidentialite.html">Politique de confidentialité</a></p>
+    <p>Support : <a href="mailto:support@proxydoc.org">support@proxydoc.org</a> — <a href="/politique-confidentialite.html">Politique de confidentialité</a></p>
     <p class="muted">Ce document est fourni à titre informatif. Pour un conseil juridique, consultez un avocat.</p>
   </section>
 </main>

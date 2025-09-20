@@ -13,6 +13,9 @@ class ContactController extends Controller
     public function terms(){
         return view('terms');
     }
+    public function support(){
+        return view('support');
+    }
     public function send(Request $request)
     {
         // 1️⃣ Validation des champs

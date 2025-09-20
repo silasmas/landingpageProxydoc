@@ -13,3 +13,4 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
 
 Route::get('/privacy-policy', [ContactController::class, 'privacyPolicy'])->name('privacy-policy');
 Route::get('/terms', [ContactController::class, 'terms'])->name('terms');
+Route::get('/support', [ContactController::class, 'support'])->name('support');
