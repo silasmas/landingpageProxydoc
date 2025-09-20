@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
+    public function privacyPolicy(){
+        return view('privacy-policy');
+    }
+    public function terms(){
+        return view('terms');
+    }
     public function send(Request $request)
     {
         // 1️⃣ Validation des champs
