@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 class ContactController extends Controller
 {
     public function privacyPolicy(){
-        return view('privacy-policy');
+        return view('privacyPolicy');
     }
     public function terms(){
         return view('terms');
