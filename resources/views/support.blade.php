@@ -58,21 +58,21 @@
     <article class="card">
       <h3>📧 E-mail</h3>
       <p>Écrivez-nous et recevez une réponse prioritaire.</p>
-      <p><a href="mailto:support@proxydoc.org" aria-label="Envoyer un e-mail au support">support@proxydoc.org</a></p>
+      <p><a href="mailto:contact@proxydoc.org" aria-label="Envoyer un e-mail au support">contact@proxydoc.org</a></p>
       <small class="muted">Heures ouvrées (Afrique/Kinshasa)</small>
     </article>
 
     <article class="card">
       <h3>💬 WhatsApp</h3>
       <p>Posez une question rapide ou suivez un dossier.</p>
-      <p><a href="https://wa.me/243XXXXXXXXX" target="_blank" rel="noopener">+243 XX XXX XX XX</a></p>
+      <p><a href="https://wa.me/+243823235255" target="_blank" rel="noopener">+243 823 235 255</a></p>
       <small class="muted">TODO : numéro officiel</small>
     </article>
 
     <article class="card">
       <h3>📞 Téléphone</h3>
       <p>Lun–Ven 09:00–18:00 (UTC+1)</p>
-      <p><a href="tel:+243XXXXXXXXX">+243 XX XXX XX XX</a></p>
+      <p><a href="tel:+243823235255">++243 823 235 255</a></p>
       <small class="muted">Appels au tarif local</small>
     </article>
   </section>
@@ -81,7 +81,7 @@
   <section class="section kpis">
     <div class="kpi">
       <strong>Horaires support</strong>
-      <span>Lun–Ven 09:00–18:00 (Afrique/Kinshasa, UTC+1)</span>
+      <span>Lundi–Dimanche 24/7 (Afrique/Kinshasa, UTC+1)</span>
     </div>
     <div class="kpi">
       <strong>Délai de première réponse</strong>
@@ -89,7 +89,7 @@
     </div>
     <div class="kpi">
       <strong>Statut du service</strong>
-      <span><a href="https://status.proxydoc.org">status.proxydoc.org</a> (TODO)</span>
+      <span><a href="mailto:contact@proxydoc.org">status.proxydoc.org</a> (TODO)</span>
     </div>
   </section>
 
@@ -97,7 +97,7 @@
   <section class="section card">
     <h2>Ouvrir un ticket</h2>
     <p class="help">Plus vous nous donnez de contexte, plus nous allons vite. Les champs marqués * sont requis.</p>
-    <form class="form" action="mailto:support@proxydoc.org" method="post" enctype="text/plain">
+    <form class="form" action="mailto:contact@proxydoc.org" method="post" enctype="text/plain">
       <div class="row grid-2">
         <div class="group">
           <label for="name">Nom complet *</label>
@@ -178,7 +178,7 @@
         <h3>Un paiement est « en cours » depuis trop longtemps</h3>
         <ul>
           <li>Vérifiez votre réseau et le solde Mobile Money / carte.</li>
-          <li>Consultez le <a href="https://status.proxydoc.org">statut</a> du service (TODO).</li>
+          <li>Consultez le <a href="mailto:contact@proxydoc.org">statut</a> du service (TODO).</li>
           <li>Fournissez la <strong>référence transaction</strong> dans un ticket.</li>
         </ul>
       </div>
@@ -190,7 +190,7 @@
         <h3>Je ne reçois pas les e-mails</h3>
         <ul>
           <li>Vérifiez les spams et l’adresse enregistrée.</li>
-          <li>Ajoutez <code>support@proxydoc.org</code> à vos contacts.</li>
+          <li>Ajoutez <code>contact@proxydoc.org</code> à vos contacts.</li>
         </ul>
       </div>
       <div class="card">
